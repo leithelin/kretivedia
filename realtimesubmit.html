@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="cz">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html;">
+<script>
+            function fdateTwoDigits(d) {
+                let now = new Date();
+                now.setDate(now.getDate() + d);
+                let mm = now.getMonth() + 1;
+                let day = now.getDate();
+                if (now.getDate() < 10) day = '0' + now.getDate();
+                if (mm < 10) mm = '0' + mm;
+                document.write(
+                    ' ' + day + '.' + mm + '.' + now.getFullYear() + ' '
+                );
+            }
+        </script>
+</head>
+<body>
+
+<link rel="stylesheet" href="css/style_latest.css">
+<div class="content">
+<div class="latest">
+<div class="latest-title">Stav žadatele v reálném čase</div>
+<div class="latest-box">
+<div class="inner ticker-wrap" id="latest_list" style="
+                            overflow: hidden;
+                            position: relative;
+                            height: 144px;
+                        ">
+<ul style="
+                                position: absolute;
+                                margin: 0px;
+                                padding: 0px;
+                                top: -35.9551px;
+                            ">
+<li style="margin: 0px; padding: 0px; height: 36px">
+<div class="date">
+<script>
+                                        fdateTwoDigits(0);
+                                    </script>
+</div>
+<div class="username">Martin Dvořák</div>
+<div class="tel">+420-*****-8949</div>
+</li>
+<li style="margin: 0px; padding: 0px; height: 36px">
+<div class="date">
+<script>
+                                        fdateTwoDigits(0);
+                                    </script>
+</div>
+<div class="username">František Procházka</div>
+<div class="tel">+420-*****-5258</div>
+</li>
+<li style="margin: 0px; padding: 0px; height: 36px">
+<div class="date">
+<script>
+                                        fdateTwoDigits(0);
+                                    </script>
+</div>
+<div class="username">Zdenek Kučera</div>
+<div class="tel">+420-*****-4721</div>
+</li>
+<li style="margin: 0px; padding: 0px; height: 36px">
+<div class="date">
+<script>
+                                        fdateTwoDigits(0);
+                                    </script>
+</div>
+<div class="username">Pavel Liška</div>
+<div class="tel">+420-*****-6431</div>
+</li>
+<li style="margin: 0px; padding: 0px; height: 36px">
+<div class="date">
+<script>
+                                        fdateTwoDigits(0);
+                                    </script>
+</div>
+<div class="username">Ludvík Němec</div>
+<div class="tel">+420-*****-1025</div>
+</li>
+<li style="margin: 0px; padding: 0px; height: 36px">
+<div class="date">
+<script>
+                                        fdateTwoDigits(0);
+                                    </script>
+</div>
+<div class="username">Erik Havlíček</div>
+<div class="tel">+420-*****-1406</div>
+</li>
+<li style="margin: 0px; padding: 0px; height: 36px">
+<div class="date">
+<script>
+                                        fdateTwoDigits(0);
+                                    </script>
+</div>
+<div class="username">Otto Růžička</div>
+<div class="tel">+420-*****-4798</div>
+</li>
+<li style="margin: 0px; padding: 0px; height: 36px">
+<div class="date">
+<script>
+                                        fdateTwoDigits(0);
+                                    </script>
+</div>
+<div class="username">Vojtěch Slavík</div>
+<div class="tel">+420-*****-3214</div>
+</li>
+<li style="margin: 0px; padding: 0px; height: 36px">
+<div class="date">
+<script>
+                                        fdateTwoDigits(0);
+                                    </script>
+</div>
+<div class="username">Zuzana Janečková</div>
+<div class="tel">+420-*****-1140</div>
+</li>
+<li style="margin: 0px; padding: 0px; height: 36px">
+<div class="date">
+<script>
+                                        fdateTwoDigits(0);
+                                    </script>
+</div>
+<div class="username">Ludvík Šimek</div>
+<div class="tel">+420-*****-6631</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.vticker.js"></script>
+<script>
+                $(function () {
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() >= 185) {
+                            $('#snb').addClass('is-fixed');
+                        } else {
+                            $('#snb').removeClass('is-fixed');
+                        }
+                    });
+
+                    $('#latest_list').vTicker({
+                        speed: 400,
+                        pause: 2000,
+                        animation: 'fade',
+                        mousePause: true,
+                        showItems: 4,
+                    });
+                });
+            </script>
+</div>
+
+</body>
+</html>

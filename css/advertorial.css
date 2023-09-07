@@ -1,0 +1,22 @@
+/* protect */
+.protect {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.protect__item {
+  font-size: 10px;
+  line-height: 12px;
+  color: #FFFFFF;
+  opacity: 0.3;
+  margin: 0;
+}
+
+.protect__item a {
+  color: inherit;
+}

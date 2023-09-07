@@ -1,0 +1,825 @@
+@import url(https://fonts.cdnfonts.com/css/times-new-roman);
+* {
+  box-sizing: border-box;
+}
+.boldText {
+  font-weight: 700;
+}
+.italicText {
+  font-style: oblique;
+}
+body {
+  margin: 0 !important;
+  background-color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul {
+  margin: 0;
+}
+.medvitroCom__comment a:hover,
+a,
+li {
+  text-decoration: none;
+}
+a {
+  cursor: pointer;
+  color: inherit;
+}
+.new_price_cur,
+.new_price_val {
+  padding: 0;
+}
+ol.list-1,
+ul.list-1 {
+  list-style: none;
+  margin: 0;
+}
+ol.list-1 {
+  counter-reset: section;
+}
+ol.list-1 li {
+  counter-increment: section;
+}
+ol.list-1 li::before {
+  content: counters(section, ".") ". ";
+  margin-right: 5px;
+  margin-left: -24px;
+  text-align: right;
+}
+.list-0 {
+  display: inline-block;
+  margin-left: 24px;
+}
+ul.list-1 li::before {
+  content: "•";
+  margin-right: 14px;
+  margin-left: -22px;
+  text-align: right;
+}
+ul.list-1 ol,
+ul.list-2 div ol {
+  counter-reset: listStyle;
+}
+ul.list-1 ol li,
+ul.list-2 div ol li {
+  counter-increment: listStyle;
+}
+ul.list-1 ol li::before,
+ul.list-2 div ol li::before {
+  content: counter(listStyle, lower-alpha);
+}
+ol li.listCircle,
+ul li.listCircle {
+  list-style-type: none;
+}
+ol li.listCircle::before,
+ul li.listCircle::before {
+  content: "∘";
+  margin-right: 14px;
+  margin-left: -22px;
+  text-align: right;
+}
+.imgBox__wrapper {
+  margin: 0 auto;
+  width: 100%;
+  height: fit-content;
+  max-width: 100px;
+}
+.imgBox__wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.ctContainer {
+  margin: -1px auto 0;
+  width: 100%;
+  background: 0 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.ctContent {
+  max-width: 1025px;
+  margin: -1px auto 0;
+  box-sizing: border-box;
+}
+.ctContent,
+.ctContentFluid {
+  width: 100%;
+  background: #fff;
+}
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  width: 100%;
+  max-width: 1000px;
+}
+.btnWrapper__btn {
+  border: 0;
+  border-radius: 15px;
+  padding: 15px;
+  font-family: sans-serif;
+  font-size: 24px;
+  word-break: break-word;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: red;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.btnWrapper__btn:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+}
+.medvitroCom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px 20px;
+  width: 100%;
+  max-width: 100%;
+}
+.medvitroCom__wrapper {
+  width: 100%;
+}
+.medvitroCom__header {
+  display: flex;
+  align-items: center;
+}
+.medvitroCom__avatarWrapper {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 50px;
+  max-width: 50px;
+}
+.medvitroCom__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.medvitroCom__info {
+  padding: 0;
+  width: 100%;
+  background: #fff 0 0;
+}
+.medvitroCom__comment,
+.medvitroCom__name {
+  font-family: sans-serif;
+  font-size: 16px;
+  word-break: break-word;
+}
+.medvitroCom__name {
+  display: block;
+  margin: 0;
+  padding: 0 0 0 10px;
+  width: 100%;
+  font-weight: 700;
+  line-height: 23px;
+  color: #000;
+}
+.medvitroCom__comment {
+  margin: 6px 0 5px;
+  padding: 0;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: none;
+}
+.medvitroCom__comment a {
+  text-decoration: underline;
+  color: #62a7d9;
+}
+.medvitroCom__imgsBlock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.medvitroCom__imgProductWrapper {
+  display: block;
+  margin: 0 4px 5px 0;
+  padding: 0;
+  width: 100%;
+  height: fit-content;
+  max-width: 350px;
+}
+.medvitroCom__imgProduct {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.medvitroCom__date {
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0 0 10px;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+  word-break: break-word;
+  color: #6b6b6b;
+}
+.oneImageWidget {
+  padding: 15px;
+}
+.oneImageWidget__wrapper {
+  margin: 0 auto;
+  width: 100%;
+  height: fit-content;
+  max-width: 800px;
+}
+.oneImageWidget__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.paragraphWidget__text {
+  margin: 0;
+  padding: 15px;
+  font-family: sans-serif;
+  line-height: 30px;
+  word-break: break-word;
+  text-align: left;
+}
+.paragraphWidget__text--371667 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  line-height: 45.5px;
+  text-align: justify;
+}
+.oneImageWidget__wrapper--202398 {
+  max-width: 600px;
+}
+.paragraphWidget__text--938662 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: justify;
+}
+.paragraphWidget--491611 {
+  text-decoration-line: underline;
+}
+.paragraphWidget__text--429256,
+.paragraphWidget__text--879102 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: justify;
+}
+.oneImageWidget__wrapper--386775 {
+  max-width: 600px;
+}
+.paragraphWidget__text--679457,
+.paragraphWidget__text--919032 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+}
+.paragraphWidget__text--919032 {
+  text-align: justify;
+}
+.oneImageWidget__wrapper--582444 {
+  max-width: 600px;
+}
+.paragraphWidget__text--162225,
+.paragraphWidget__text--307023,
+.paragraphWidget__text--723837,
+.paragraphWidget__text--917434 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: justify;
+}
+.paragraphWidget__text--307023,
+.paragraphWidget__text--723837 {
+  font-size: 30px;
+  line-height: 39px;
+}
+.paragraphWidget__text--307023 {
+  font-size: 20px;
+  line-height: 26px;
+}
+.oneImageWidget__wrapper--672201 {
+  max-width: 600px;
+}
+.paragraphWidget__text--896446 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: justify;
+}
+.oneImageWidget__wrapper--825572 {
+  max-width: 600px;
+}
+.paragraphWidget__text--972865 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: justify;
+}
+.oneImageWidget__wrapper--844196 {
+  max-width: 600px;
+}
+.paragraphWidget__text--279651,
+.paragraphWidget__text--438702,
+.paragraphWidget__text--988390 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: justify;
+}
+.paragraphWidget__text--279651,
+.paragraphWidget__text--438702 {
+  font-size: 30px;
+  line-height: 39px;
+}
+.paragraphWidget__text--279651 {
+  font-size: 20px;
+  line-height: 26px;
+}
+.paragraphWidget__text--129634,
+.paragraphWidget__text--465863,
+.paragraphWidget__text--590377,
+.paragraphWidget__text--934885 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 39px;
+  text-align: justify;
+}
+.paragraphWidget__text--129634,
+.paragraphWidget__text--590377,
+.paragraphWidget__text--934885 {
+  font-size: 20px;
+  line-height: 26px;
+}
+.paragraphWidget__text--129634,
+.paragraphWidget__text--590377 {
+  font-size: 30px;
+  line-height: 39px;
+}
+.paragraphWidget__text--129634 {
+  font-size: 20px;
+  line-height: 26px;
+}
+.paragraphWidget--643123--343591 {
+  font-style: oblique;
+}
+.oneImageWidget__wrapper--844695 {
+  max-width: 600px;
+}
+.paragraphWidget__text--282962 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: justify;
+}
+.paragraphWidget--632303--451920 {
+  font-style: oblique;
+}
+.oneImageWidget__wrapper--817579 {
+  max-width: 600px;
+}
+.paragraphWidget__text--766329 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: justify;
+}
+.paragraphWidget--234325--504748 {
+  font-style: oblique;
+}
+.oneImageWidget__wrapper--519475 {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.paragraphWidget__text--551240 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: justify;
+}
+.paragraphWidget--846235--463824 {
+  font-style: oblique;
+}
+.paragraphWidget__text--948375 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: justify;
+  border: 3.99148px double #ba0005;
+}
+.paragraphWidget--129402--350919 {
+  font-style: oblique;
+}
+.paragraphWidget__text--891351 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: justify;
+}
+.paragraphWidget--448529--949396 {
+  font-style: oblique;
+}
+.paragraphWidget__text--491352 {
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 39px;
+  text-align: justify;
+}
+.medvitroCom__comment--691230,
+.medvitroCom__comment--830124,
+.medvitroCom__name--761499,
+.medvitroCom__name--774076 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--691230,
+.medvitroCom__comment--830124,
+.medvitroCom__name--774076 {
+  font-weight: 400;
+}
+.medvitroCom__comment--691230,
+.medvitroCom__name--774076 {
+  font-weight: 700;
+}
+.medvitroCom__comment--691230 {
+  font-weight: 400;
+}
+.medvitroCom__comment--370912,
+.medvitroCom__comment--953118,
+.medvitroCom__name--711053,
+.medvitroCom__name--719953 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--370912,
+.medvitroCom__comment--953118,
+.medvitroCom__name--711053 {
+  font-weight: 400;
+}
+.medvitroCom__comment--953118,
+.medvitroCom__name--711053 {
+  font-weight: 700;
+}
+.medvitroCom__comment--953118 {
+  font-weight: 400;
+}
+.medvitroCom__comment--301990,
+.medvitroCom__comment--352219,
+.medvitroCom__name--264220,
+.medvitroCom__name--582983 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--301990,
+.medvitroCom__comment--352219,
+.medvitroCom__name--582983 {
+  font-weight: 400;
+}
+.medvitroCom__comment--352219,
+.medvitroCom__name--582983 {
+  font-weight: 700;
+}
+.medvitroCom__comment--352219 {
+  font-weight: 400;
+}
+.medvitroCom__comment--833608,
+.medvitroCom__comment--989972,
+.medvitroCom__name--871251,
+.medvitroCom__name--931283 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--833608,
+.medvitroCom__comment--989972,
+.medvitroCom__name--871251 {
+  font-weight: 400;
+}
+.medvitroCom__comment--833608,
+.medvitroCom__name--871251 {
+  font-weight: 700;
+}
+.medvitroCom__comment--833608 {
+  font-weight: 400;
+}
+.medvitroCom__comment--518396,
+.medvitroCom__comment--619053,
+.medvitroCom__name--144988,
+.medvitroCom__name--288089 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--518396,
+.medvitroCom__comment--619053,
+.medvitroCom__name--288089 {
+  font-weight: 400;
+}
+.medvitroCom__comment--619053,
+.medvitroCom__name--288089 {
+  font-weight: 700;
+}
+.medvitroCom__comment--619053 {
+  font-weight: 400;
+}
+.medvitroCom__comment--513465,
+.medvitroCom__comment--800314,
+.medvitroCom__name--462746,
+.medvitroCom__name--862634 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--513465,
+.medvitroCom__comment--800314,
+.medvitroCom__name--462746 {
+  font-weight: 400;
+}
+.medvitroCom__comment--800314,
+.medvitroCom__name--462746 {
+  font-weight: 700;
+}
+.medvitroCom__comment--800314 {
+  font-weight: 400;
+}
+.medvitroCom__comment--135871,
+.medvitroCom__comment--344286,
+.medvitroCom__name--411977,
+.medvitroCom__name--720205 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--135871,
+.medvitroCom__comment--344286,
+.medvitroCom__name--411977 {
+  font-weight: 400;
+}
+.medvitroCom__comment--344286,
+.medvitroCom__name--411977 {
+  font-weight: 700;
+}
+.medvitroCom__comment--344286 {
+  font-weight: 400;
+}
+.medvitroCom__comment--332353,
+.medvitroCom__comment--352603,
+.medvitroCom__name--668440,
+.medvitroCom__name--714507 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--332353,
+.medvitroCom__comment--352603,
+.medvitroCom__name--714507 {
+  font-weight: 400;
+}
+.medvitroCom__comment--332353,
+.medvitroCom__name--714507 {
+  font-weight: 700;
+}
+.medvitroCom__comment--332353 {
+  font-weight: 400;
+}
+.medvitroCom__comment--376541,
+.medvitroCom__comment--704024,
+.medvitroCom__name--360002,
+.medvitroCom__name--558336 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--376541,
+.medvitroCom__comment--704024,
+.medvitroCom__name--558336 {
+  font-weight: 400;
+}
+.medvitroCom__comment--704024,
+.medvitroCom__name--558336 {
+  font-weight: 700;
+}
+.medvitroCom__comment--704024 {
+  font-weight: 400;
+}
+.medvitroCom__comment--673746,
+.medvitroCom__comment--688272,
+.medvitroCom__name--121645,
+.medvitroCom__name--420174 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--673746,
+.medvitroCom__comment--688272,
+.medvitroCom__name--420174 {
+  font-weight: 400;
+}
+.medvitroCom__comment--673746,
+.medvitroCom__name--420174 {
+  font-weight: 700;
+}
+.medvitroCom__comment--673746 {
+  font-weight: 400;
+}
+.medvitroCom__comment--187694,
+.medvitroCom__comment--957619,
+.medvitroCom__name--385161,
+.medvitroCom__name--944358 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--187694,
+.medvitroCom__comment--957619,
+.medvitroCom__name--385161 {
+  font-weight: 400;
+}
+.medvitroCom__comment--187694,
+.medvitroCom__name--385161 {
+  font-weight: 700;
+}
+.medvitroCom__comment--187694 {
+  font-weight: 400;
+}
+.medvitroCom__comment--761570,
+.medvitroCom__comment--977995,
+.medvitroCom__name--834498,
+.medvitroCom__name--944758 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--761570,
+.medvitroCom__comment--977995,
+.medvitroCom__name--834498 {
+  font-weight: 400;
+}
+.medvitroCom__comment--761570,
+.medvitroCom__name--834498 {
+  font-weight: 700;
+}
+.medvitroCom__comment--761570 {
+  font-weight: 400;
+}
+.medvitroCom__comment--871397,
+.medvitroCom__comment--912129,
+.medvitroCom__name--752172,
+.medvitroCom__name--996931 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--871397,
+.medvitroCom__comment--912129,
+.medvitroCom__name--996931 {
+  font-weight: 400;
+}
+.medvitroCom__comment--871397,
+.medvitroCom__name--996931 {
+  font-weight: 700;
+}
+.medvitroCom__comment--871397 {
+  font-weight: 400;
+}
+.medvitroCom__comment--368882,
+.medvitroCom__comment--782048,
+.medvitroCom__name--260956,
+.medvitroCom__name--586164 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--368882,
+.medvitroCom__comment--782048,
+.medvitroCom__name--260956 {
+  font-weight: 400;
+}
+.medvitroCom__comment--368882,
+.medvitroCom__name--260956 {
+  font-weight: 700;
+}
+.medvitroCom__comment--368882 {
+  font-weight: 400;
+}
+.medvitroCom__comment--257663,
+.medvitroCom__comment--879410,
+.medvitroCom__name--243008,
+.medvitroCom__name--339493 {
+  font-family:  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.medvitroCom__comment--257663,
+.medvitroCom__comment--879410,
+.medvitroCom__name--243008 {
+  font-weight: 400;
+}
+.medvitroCom__comment--879410,
+.medvitroCom__name--243008 {
+  font-weight: 700;
+}
+.medvitroCom__comment--879410 {
+  font-weight: 400;
+}
+@media (max-width: 960px) {
+  .medvitroCom__info {
+    float: none;
+    width: auto;
+  }
+  .medvitroCom {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .textMedia {
+    padding: 5px;
+  }
+  .textHeightMedia {
+    line-height: normal;
+  }
+  .textLetterMedia {
+    letter-spacing: normal;
+  }
+}
+@media (max-width: 767px) {
+  .btnWrapper__btn {
+    font-size: 20px;
+  }
+  .medvitroCom__imgsBlock {
+    justify-content: center;
+    float: none;
+    width: auto;
+  }
+}
